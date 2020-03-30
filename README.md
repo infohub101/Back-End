@@ -12,3 +12,37 @@ Base URL: https://infohub101.herokuapp.com
 |------|------------------|-------------------|
 |POST  |/api/auth/register|	Register new users|
 |POST  |/api/auth/login   |	Grants user access|
+
+## Register Endpoint
+```js
+POST /api/auth/register
+```
+### Expected Body
+```js
+{
+  "username": "new_user",
+  "password": "password",
+  "first_name": "John",
+  "last_name": "Doe",
+  "email": "JohnDoe@gmail.com"
+}
+```
+
+## Login Endpoint
+```js
+POST /api/auth/login
+```
+### Expected Body
+```js
+{
+  "username": "test_user",
+  "password": "password"
+}
+```
+### Expected Response
+```js
+{
+    "message": "Welcome test_user!",
+    "token": "eyJhbGciOiJIUzI1NuIsInR5cCI6IkpXVCJ9.eyJzdWJqZWN0IjozLCJ1c2VybmFtZSI6ImFsZXhpcyIsInJvbGUiOiJ1c2VyIiwiaWF0IjoxNTgzMjA3NTI0LCJleHAiOjE1ODMyMTExMjR9.qUO29mM1WCUnECC2SzYBcWpWHief9wqQVQlMsm3VtZ0"
+}
+```
