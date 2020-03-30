@@ -35,14 +35,14 @@ POST /api/auth/login
 ### Expected Body
 ```js
 {
-  "username": "test_user",
+  "username": "user",
   "password": "password"
 }
 ```
 ### Expected Response
 ```js
 {
-    "message": "Welcome test_user!",
-    "token": "eyJhbGciOiJIUzI1NuIsInR5cCI6IkpXVCJ9.eyJzdWJqZWN0IjozLCJ1c2VybmFtZSI6ImFsZXhpcyIsInJvbGUiOiJ1c2VyIiwiaWF0IjoxNTgzMjA3NTI0LCJleHAiOjE1ODMyMTExMjR9.qUO29mM1WCUnECC2SzYBcWpWHief9wqQVQlMsm3VtZ0"
+    "hello": "username",
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFkbWluIiwiaWF0IjoxNTg1NTQxOTg1LCJleHAiOjE1ODU1NDU1ODV9.JQBojlTtPB96MqvYndC5ZZU2XK2W_tspRJl8aQPuVhw"
 }
 ```
