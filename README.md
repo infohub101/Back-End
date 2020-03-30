@@ -7,7 +7,7 @@ These instructions will get you a copy of the project up and running on your loc
 [API Endpoints](#API-Endpoints)
 
 ## API Endpoints
-
+Base URL: https://infohub101.herokuapp.com
 |Method|Route             |Description        |
 |------|------------------|-------------------|
 |POST  |/api/auth/register|	Register new users|
