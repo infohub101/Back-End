@@ -26,24 +26,25 @@ router.get('/:id', (req, res) =>{
 router.post('/', (req, res) =>{
     let newAPI = req.body;
     API.insert(newAPI).then(newAPI=>{
-        res.status(200).json(newAPI)
+        console.log("NEW API", newAPI)
+        res.status(201).json(newAPI)
     })
     .catch(err=>{
-        res.status(500).json({message: 'Failed To Add New Post', APIent: newAPI})
+        res.status(500).json({message: 'Failed To Add New API to the database', APIent: newAPI})
     })
 })
-//DELETE post
+//DELETE API
 router.delete('/:id', (req, res) =>{
-    API.findById(req.params.id).then(post =>{
-        if(post){
+    API.findById(req.params.id).then(api =>{
+        if(api){
             API.remove(req.params.id).then(removed =>{
-                res.status(200).json({success: 'deleted', id: post.id});
+                res.status(200).json({success: 'API deleted', id: api.id});
             }).catch(err=>{
-                res.status(500).json({message: `Failed To Delete Post w/ ID: ${req.params.id}`})
+                res.status(500).json({message: `Failed To Delete API: ${req.params.id}`})
             })
         }
         else{
-            res.status(401).json({message: `Could not Find Post w/ ID: ${req.params.id}`})
+            res.status(401).json({message: `Could not Find API w/ ID: ${req.params.id}`})
         }
     }).catch(err => {
         res.status(500).json({message: 'Failed To Delete API'})
