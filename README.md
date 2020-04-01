@@ -160,9 +160,10 @@ POST /api/auth/apidatabase/
 ```js
 {
   "id": 1,
+  "user_id": 1,
   "title": "title",
   "img": "http://image.google.com",
-	"url": "http://www.abc.com"
+  "url": "http://www.abc.com"
 }
 ```
 
