@@ -192,11 +192,15 @@ PUT /api/auth/apidatabase/:id
 ### Expected Response
 ```js
 {
-  "username": "new_user",
-  "password": "password",
-  "first_name": "John",
-  "last_name": "Doe",
-  "email": "JohnDoe@gmail.com"
+    "success": "updated",
+    "id": 1,
+    "updated": {
+        "username": "new_user",
+        "password": "password",
+        "first_name": "John",
+        "last_name": "Doe",
+        "email": "JohnDoe@gmail.com"
+    }
 }
 ```
 
