@@ -171,7 +171,7 @@ POST /api/auth/apidatabase/
 ## PUT
 ## PUT User Endpoint
 ```js
-PUT /api/auth/apidatabase/
+PUT /api/auth/apidatabase/:id
 ```
 ### Expected Header: Authorization Token
 ```js
@@ -203,7 +203,7 @@ PUT /api/auth/apidatabase/
 ## DELETE 
 ## DELETE User Endpoint
 ```js
-DELETE /api/auth/userdatabase/
+DELETE /api/auth/userdatabase/:id
 ```
 ### Expected Header: Authorization Token
 ```js
@@ -221,7 +221,7 @@ DELETE /api/auth/userdatabase/
 
 ## DELETE API Endpoint
 ```js
-DELETE /api/auth/apidatabase/
+DELETE /api/auth/apidatabase/:id
 ```
 ### Expected Header: Authorization Token
 ```js
