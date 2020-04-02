@@ -7,6 +7,7 @@ These instructions will get you a copy of the project up and running on your loc
 - [API Endpoints](#API-Endpoints)
 - [API Endpoints - GET](#GET)
 - [API Endpoints - POST](#POST)
+- [API Endpoints - PUT](#PUT)
 - [API Endpoints - DELETE](#DELETE)
 
 ## API Endpoints
@@ -19,7 +20,9 @@ Base URL: https://infohub101.herokuapp.com
 |POST  |/api/auth/register              |POST Register new users  |
 |POST  |/api/auth/login                 |POST Grants user access  |
 |POST  |/api/auth/apidatabase           |POST New API             |
-|DELETE|/api/auth/userdatabase/:id      |DELETE API Posts By  ID  |
+|PUT   |/api/auth/userdatabase/:id      |PUT User By ID           |
+|DELETE|/api/auth/userdatabase/:id      |DELETE User By ID        |
+|DELETE|/api/auth/apidatabase/:id       |DELETE API By ID         |
 
 
 ## GET
@@ -155,7 +158,6 @@ POST /api/auth/apidatabase/
   "url": "http://www.abc.com"
 }
 ```
-
 ### Expected Response
 ```js
 {
@@ -167,7 +169,57 @@ POST /api/auth/apidatabase/
 }
 ```
 
+## PUT
+## PUT User Endpoint
+```js
+PUT /api/auth/apidatabase/
+```
+### Expected Header: Authorization Token
+```js
+{
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFkbWluIiwiaWF0IjoxNTg1NTQxOTg1LCJleHAiOjE1ODU1NDU1ODV9.JQBojlTtPB96MqvYndC5ZZU2XK2W_tspRJl8aQPuVhw"
+}
+```
+### Expected Body
+```js
+{
+  "username": "new_user",
+  "password": "password",
+  "first_name": "John",
+  "last_name": "Doe",
+  "email": "JohnDoe@gmail.com"
+}
+```
+### Expected Response
+```js
+{
+  "username": "new_user",
+  "password": "password",
+  "first_name": "John",
+  "last_name": "Doe",
+  "email": "JohnDoe@gmail.com"
+}
+```
+
 ## DELETE 
+## DELETE User Endpoint
+```js
+DELETE /api/auth/userdatabase/
+```
+### Expected Header: Authorization Token
+```js
+{
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFkbWluIiwiaWF0IjoxNTg1NTQxOTg1LCJleHAiOjE1ODU1NDU1ODV9.JQBojlTtPB96MqvYndC5ZZU2XK2W_tspRJl8aQPuVhw"
+}
+```
+### Expected Response
+```js
+{
+    "success": "User deleted",
+    "id": 1
+}
+```
+
 ## DELETE API Endpoint
 ```js
 DELETE /api/auth/apidatabase/
