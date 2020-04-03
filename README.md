@@ -14,6 +14,7 @@ Base URL: https://infohub101.herokuapp.com
 |Method|Route                           |Description              |
 |------|--------------------------------|-------------------------|
 |GET   |/api/auth/userdatabase          |GET All User database    |
+|GET   |/api/auth/apidatabase/:id       |GET User by ID  ||||||   |
 |GET   |/api/auth/apidatabase           |GET All API database     |
 |GET   |/api/auth/userdatabase/:id/api  |GET User Posts By ID     |
 |POST  |/api/auth/register              |POST Register new users  |
@@ -55,6 +56,28 @@ GET /api/auth/userdatabase
         "email": "test@test.com"
     }
 ]
+```
+
+## GET User by ID Endpoint
+```js
+GET /api/auth/userdatabase/:id
+```
+### Expected Header: Authorization Token
+```js
+{
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFkbWluIiwiaWF0IjoxNTg1NTQxOTg1LCJleHAiOjE1ODU1NDU1ODV9.JQBojlTtPB96MqvYndC5ZZU2XK2W_tspRJl8aQPuVhw"
+}
+```
+### Expected Response
+```js
+{
+    "id": 1,
+    "username": "test_user",
+    "password": "$2a$08$k9ufB.uiLG.6r4wpmIRgfuUfL6fcBIAAwG/XEkoFb5U9UveJpb1DO",
+    "first_name": "John",
+    "last_name": "Do",
+    "email": "johndoe@gmail.com"
+}
 ```
 
 ## GET API Database Endpoint
