@@ -14,7 +14,7 @@ Base URL: https://infohub101.herokuapp.com
 |Method|Route                           |Description              |
 |------|--------------------------------|-------------------------|
 |GET   |/api/auth/userdatabase          |GET All User database    |
-|GET   |/api/auth/apidatabase/:id       |GET User by ID  ||||||   |
+|GET   |/api/auth/userdatabase/:id       |GET User by ID           |
 |GET   |/api/auth/apidatabase           |GET All API database     |
 |GET   |/api/auth/userdatabase/:id/api  |GET User Posts By ID     |
 |POST  |/api/auth/register              |POST Register new users  |
