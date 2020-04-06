@@ -1,6 +1,6 @@
 const router = require('express').Router();
 const express = require('express');
-const API = require('./api-model'); //API Model
+const API = require('./userapi-model'); //API Model
 
 //GET all apidatabase
 router.get('/', (req, res) =>{
@@ -20,6 +20,17 @@ router.get('/:id', (req, res) =>{
     })
     .catch(err => {
         res.status(500).json({message: 'Failed To Get API With That ID'})
+    })
+})
+//POST new API
+router.post('/', (req, res) =>{
+    let newAPI = req.body;
+    API.insert(newAPI).then(newAPI=>{
+        console.log("NEW API", newAPI)
+        res.status(201).json(newAPI)
+    })
+    .catch(err=>{
+        res.status(500).json({message: 'Failed To Add New API to the database', APIent: newAPI})
     })
 })
 //DELETE API

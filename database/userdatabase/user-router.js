@@ -1,6 +1,6 @@
 const router = require('express').Router();
 const User = require('./user-model'); //API Model
-const API = require('../apidatabase/api-model'); //API Model
+const userAPI = require('../userapidatabase/userapi-model'); //API Model
 const bcrypt = require('bcryptjs');
 
 //GET all apidatabase
@@ -30,7 +30,7 @@ router.get('/:id/api', (req, res) => {
     User.findById(req.params.id)
     .then(user =>{
         if(user){
-            API.findBy({user_id: user.id}).then(api =>{
+            userAPI.findBy({user_id: user.id}).then(api =>{
                 res.status(200).json(api)
             })
             .catch(err =>{
