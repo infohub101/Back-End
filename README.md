@@ -14,15 +14,15 @@ Base URL: https://infohub101.herokuapp.com
 |Method|Route                           |Description              |
 |------|--------------------------------|-------------------------|
 |GET   |/api/auth/userdatabase          |GET All User database    |
-|GET   |/api/auth/userdatabase/:id       |GET User by ID           |
+|GET   |/api/auth/userdatabase/:id      |GET User by ID           |
 |GET   |/api/auth/apidatabase           |GET All API database     |
 |GET   |/api/auth/userdatabase/:id/api  |GET User Posts By ID     |
 |POST  |/api/auth/register              |POST Register new users  |
 |POST  |/api/auth/login                 |POST Grants user access  |
-|POST  |/api/auth/apidatabase           |POST New API             |
+|POST  |/api/auth/userapidatabase       |POST New API             |
 |PUT   |/api/auth/userdatabase/:id      |PUT User By ID           |
 |DELETE|/api/auth/userdatabase/:id      |DELETE User By ID        |
-|DELETE|/api/auth/apidatabase/:id       |DELETE API By ID         |
+|DELETE|/api/auth/userapidatabase/:id   |DELETE API By ID         |
 
 
 ## GET
@@ -95,11 +95,15 @@ GET /api/auth/apidatabase
 [
     {
         "id": 1,
+        "title": "Title",
+        "img": "http://img.google.com",
         "url": "https://newsapi.org/v2/top-headlines?country=us&apiKey=17bde5c1903e4a31a9d1560bf1256a95"
     },
     {
         "id": 2,
-        "url": "https://newsapi.org/v2/sources?language=en&country=us&apiKey=17bde5c1903e4a31a9d1560bf1256a95"
+        "title": "Title",
+        "img": "http://img.google.com",
+        "url": "https://newsapi.org/v2/top-headlines?country=us&apiKey=17bde5c1903e4a31a9d1560bf1256a95"
     }
 ]
 ```
@@ -120,8 +124,10 @@ GET /api/auth/userdatabase/:id/api
     {
         "id": 1,
         "user_id": 1,
+        "title": "Title",
+        "img": "http://img.google.com",
         "url": "https://newsapi.org/v2/top-headlines?country=us&apiKey=17bde5c1903e4a31a9d1560bf1256a95",
-        "created_date": "2020-04-01 01:13:13"
+        "created_date": "2020-04-06 17:27:57"
     }
 ]
 ```
@@ -163,7 +169,7 @@ POST /api/auth/login
 
 ## POST API Endpoint
 ```js
-POST /api/auth/apidatabase/
+POST /api/auth/userapidatabase/
 ```
 ### Expected Header: Authorization Token
 ```js
@@ -248,7 +254,7 @@ DELETE /api/auth/userdatabase/:id
 
 ## DELETE API Endpoint
 ```js
-DELETE /api/auth/apidatabase/:id
+DELETE /api/auth/userapidatabase/:id
 ```
 ### Expected Header: Authorization Token
 ```js
