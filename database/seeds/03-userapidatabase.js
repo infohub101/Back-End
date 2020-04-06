@@ -7,7 +7,7 @@ exports.seed = function(knex) {
         [
           {
             user_id: 1, 
-            category: "Category",
+            category: "News",
             title: 'Title',
             description: 'Description',
             img: 'http://img.google.com',
@@ -15,7 +15,7 @@ exports.seed = function(knex) {
           },
           {
             user_id: 2, 
-            category: "Category",
+            category: "News",
             title: 'Title',
             description: 'Description',
             img: 'http://img.google.com',
@@ -23,7 +23,7 @@ exports.seed = function(knex) {
           },
           {
             user_id: 3, 
-            category: "Category",
+            category: "Social",
             title: 'Title',
             description: 'Description',
             img: 'http://img.google.com',
