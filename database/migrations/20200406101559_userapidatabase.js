@@ -1,21 +1,25 @@
 exports.up = function(knex) {
     return knex.schema.createTable('userapidatabase', api => {
-      //Auto Incrementing ID
+      // Auto Incrementing ID
       api.increments();
-      //Foreign Key
+      // Foreign Key
       api.integer('user_id')
         .unsigned() //does not allow integers to be negative 
         .references('id')
         .inTable('users')
         .onUpdate('CASCADE')
         .onDelete('CASCADE')
-      //Title
+      // Category
+      api.string('category').notNullable()
+      // Title
       api.string('title').notNullable()
-      //img
+      // Description
+      api.string('description').notNullable()
+      // Image
       api.string('img')
-      //URL
+      // API URL
       api.string('url').notNullable()
-      //Time Stamp
+      // Time Stamp
       api.timestamp('created_date').defaultTo(knex.fn.now()).notNullable();
     })
   };
