@@ -58,8 +58,8 @@ router.put('/:id', (req,res) =>{
             })
         }else if(user && (!bcrypt.compareSync(updatedUser.password, user.password))){
             console.log('user password was changed')
-            const hash = bcrypt.hashSync(updatedUser.password, 8); //hashes the updated password
-            updatedUser.password = hash; //sets updated user password value to hashed password
+            //const hash = bcrypt.hashSync(updatedUser.password, 8); //hashes the updated password
+           // updatedUser.password = hash; //sets updated user password value to hashed password
             User.update(updatedUser, id).then(updated =>{
                 res.status(201).json({success: 'updated', id: user.id, updated: updatedUser})
             })
