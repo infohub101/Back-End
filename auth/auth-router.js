@@ -7,8 +7,8 @@ const Users = require("./auth-model");
 function generateToken(user) {
   const payload = { username: user.username };
   const secret = jwtSecret;
-  const options = { expiresIn: '1h' };
-  return jwt.sign(payload, secret, options);
+  //const options = { expiresIn: '1h' };
+  return jwt.sign(payload, secret);
 }
 
 router.post('/register', (req, res) => {
