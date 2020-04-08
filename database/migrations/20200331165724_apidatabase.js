@@ -2,6 +2,8 @@ exports.up = function(knex) {
     return knex.schema.createTable('apidatabase', api => {
       // Auto Incrementing ID
       api.increments();
+      // API ID
+      api.string('api_id').notNullable()
       // Category
       api.string('category').notNullable()
       // Title

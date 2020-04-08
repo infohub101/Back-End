@@ -8,6 +8,7 @@ exports.seed = function(knex) {
           // News
           {
             category: "News",
+            api_id: 1,
             title: 'Title',
             description: 'Description',
             img: 'http://img.google.com',
@@ -15,6 +16,7 @@ exports.seed = function(knex) {
           },
           {
             category: "News",
+            api_id: 2,
             title: 'Title',
             description: 'Description',
             img: 'http://img.google.com',
@@ -24,6 +26,7 @@ exports.seed = function(knex) {
           // Social
           {
             category: "Social",
+            api_id: 3,
             title: 'Title',
             description: 'Description',
             img: 'http://img.google.com',
