@@ -9,6 +9,13 @@ exports.up = function(knex) {
         .inTable('users')
         .onUpdate('CASCADE')
         .onDelete('CASCADE')
+      // Foreign Key  
+      api.integer('api_id')
+      .unsigned() //does not allow integers to be negative 
+      .references('id')
+      .inTable('apidatabase')
+      .onUpdate('CASCADE')
+      .onDelete('CASCADE')
       // Category
       api.string('category').notNullable()
       // Title
