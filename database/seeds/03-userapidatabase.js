@@ -7,6 +7,7 @@ exports.seed = function(knex) {
         [
           {
             user_id: 1, 
+            api_id: 1,
             category: "News",
             title: 'Title',
             description: 'Description',
@@ -15,6 +16,7 @@ exports.seed = function(knex) {
           },
           {
             user_id: 2, 
+            api_id: 2,
             category: "News",
             title: 'Title',
             description: 'Description',
@@ -23,6 +25,7 @@ exports.seed = function(knex) {
           },
           {
             user_id: 3, 
+            api_id: 3,
             category: "Social",
             title: 'Title',
             description: 'Description',
