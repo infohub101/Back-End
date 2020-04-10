@@ -1,19 +1,31 @@
-// Update with your config settings.
+require("dotenv").config(); //access to .env variables
 
-module.exports = {
+const database = {
+  client: 'pg',
+      connection: {
+          host: 'localhost',
+          database: 'dev'
+      },
+      migrations: {
+          directory: './data/migrations'
+      },
+      seeds: { 
+          directory: './data/seeds' 
+      },
+  };
 
-  development: {
-    client: 'sqlite3',
-    connection: {
-      filename: './database/auth.db3'
+  module.exports = {
+    
+    development:{
+      ...database,
+      connection: {
+        port: process.env.POSTGRES_PORT,
+        database: 'dev',
+        user: process.env.USER,
+        password: process.env.PASSWORD
+      },
+      tableName: 'knex_migrations'
     },
-    useNullAsDefault: true,
-    migrations: {
-      directory: './database/migrations',
-    },
-    seeds: { directory: './database/seeds' },
-  },
-
   staging: {
     client: 'postgresql',
     connection: {

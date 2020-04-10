@@ -15,6 +15,8 @@ exports.up = function(knex) {
       .unsigned() //does not allow integers to be negative 
       .references('id')
       .inTable('apidatabase')
+      .onUpdate('CASCADE')
+      .onDelete('CASCADE')
       .notNullable()
       // Category
       api.string('category').notNullable()
