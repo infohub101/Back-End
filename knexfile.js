@@ -7,15 +7,15 @@ const database = {
           database: 'dev'
       },
       migrations: {
-          directory: './data/migrations'
+          directory: './database/migrations'
       },
       seeds: { 
-          directory: './data/seeds' 
+          directory: './database/seeds' 
       },
   };
 
   module.exports = {
-    
+
     development:{
       ...database,
       connection: {
@@ -26,36 +26,10 @@ const database = {
       },
       tableName: 'knex_migrations'
     },
-  staging: {
-    client: 'postgresql',
-    connection: {
-      database: 'my_db',
-      user:     'username',
-      password: 'password'
-    },
-    pool: {
-      min: 2,
-      max: 10
-    },
-    migrations: {
+
+    production: {
+      ...database,
+      connection: process.env.DATABASE_URL,
       tableName: 'knex_migrations'
     }
-  },
-
-  production: {
-    client: 'postgresql',
-    connection: {
-      database: 'my_db',
-      user:     'username',
-      password: 'password'
-    },
-    pool: {
-      min: 2,
-      max: 10
-    },
-    migrations: {
-      tableName: 'knex_migrations'
-    }
-  }
-
-};
+  };
