@@ -12,7 +12,7 @@ function findBy(filter){
 //Find User by ID
 function findById(id) {
     return db('userapidatabase')
-    .select('id', 'user_id', 'api_id', 'category', 'title', 'description', 'img', 'url')
+    .select('id', 'user_id', 'api_id', 'category', 'title', 'description', 'img', 'url', 'status')
     .where({id})
     .first();
 }

@@ -26,6 +26,8 @@ exports.up = function(knex) {
       api.string('img')
       // API URL
       api.string('url').notNullable()
+      // API status
+      api.string('status').notNullable()
       // Time Stamp
       api.timestamp('created_date').defaultTo(knex.fn.now()).notNullable();
     })
