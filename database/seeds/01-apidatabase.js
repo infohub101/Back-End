@@ -9,9 +9,9 @@ exports.seed = function(knex) {
           {
             category: "News",
             api_id: "N1",
-            title: 'Title',
-            description: 'Description',
-            img: 'http://img.google.com',
+            title: 'NewsAPI - Headlines',
+            description: 'Daily US Headlines',
+            img: 'http://https://lh3.googleusercontent.com/proxy/lD4D1xGL6fSr1RL--KKxXknjxkY7vUIQZOa9M3rpCRFdKRE696CnPc2kODWsNFfbxO06HRcvqV_Zr8Jleo_fBMlylDvxGHiuf7voTZcsWeGmjLYL36tYlpG0r7_AruzPziQQ41SgaNo.google.com',
             url: 'https://newsapi.org/v2/top-headlines?country=us&apiKey=17bde5c1903e4a31a9d1560bf1256a95',
           },
           // {
@@ -19,7 +19,7 @@ exports.seed = function(knex) {
           //   api_id: 2,
           //   title: 'Title',
           //   description: 'Description',
-          //   img: 'http://img.google.com',
+          //   img: 'https://lh3.googleusercontent.com/proxy/lD4D1xGL6fSr1RL--KKxXknjxkY7vUIQZOa9M3rpCRFdKRE696CnPc2kODWsNFfbxO06HRcvqV_Zr8Jleo_fBMlylDvxGHiuf7voTZcsWeGmjLYL36tYlpG0r7_AruzPziQQ41SgaNo',
           //   url: 'https://newsapi.org/v2/top-headlines?country=us&apiKey=17bde5c1903e4a31a9d1560bf1256a95',
           // },
 
