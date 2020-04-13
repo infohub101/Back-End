@@ -11,7 +11,7 @@ exports.seed = function(knex) {
             api_id: "N1",
             title: 'NewsAPI - Headlines',
             description: 'Daily US Headlines',
-            img: 'http://https://lh3.googleusercontent.com/proxy/lD4D1xGL6fSr1RL--KKxXknjxkY7vUIQZOa9M3rpCRFdKRE696CnPc2kODWsNFfbxO06HRcvqV_Zr8Jleo_fBMlylDvxGHiuf7voTZcsWeGmjLYL36tYlpG0r7_AruzPziQQ41SgaNo.google.com',
+            img: 'https://i1.wp.com/www.madeiraislandnews.com/wp-content/uploads/2016/11/onslaatstenieuws.jpg?resize=759%2C343&ssl=1',
             url: 'https://newsapi.org/v2/top-headlines?country=us&apiKey=17bde5c1903e4a31a9d1560bf1256a95',
           },
           // {
