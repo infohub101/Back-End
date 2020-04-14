@@ -14,7 +14,7 @@ exports.seed = function(knex) {
             title: 'US Holidays - 2020',
             description: 'Public holidays in the United States in Year 2020',
             img: 'https://p1.hiclipart.com/preview/965/850/482/happy-new-year-2020-new-years-2020-2020-png-clipart-thumbnail.jpg',
-            url: `https://calendarific.com/api/v2/holidays?&api_key=${process.env.USHolidayAPI}&country=US&year=2019`,
+            url: `https://calendarific.com/api/v2/holidays?&api_key=${process.env.USHolidayAPI}&country=US&year=2020`,
           },
 
           // Education
