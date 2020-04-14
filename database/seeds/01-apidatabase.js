@@ -5,6 +5,16 @@ exports.seed = function(knex) {
       // Inserts seed entries
       return knex('apidatabase').insert(
         [
+          // Education
+          {
+            category: "Education",
+            api_id: "Ed1",
+            title: 'NASA - Astronomy Picture of the Day',
+            description: 'Discover the cosmos! Each day a different image or photograph of our fascinating universe is featured, along with a brief explanation written by a professional astronomer.',
+            img: 'https://upload.wikimedia.org/wikipedia/commons/e/e5/NASA_logo.svg',
+            url: 'https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY',
+          },
+
           // News
           {
             category: "News",
@@ -14,24 +24,6 @@ exports.seed = function(knex) {
             img: 'https://i1.wp.com/www.madeiraislandnews.com/wp-content/uploads/2016/11/onslaatstenieuws.jpg?resize=759%2C343&ssl=1',
             url: 'https://newsapi.org/v2/top-headlines?country=us&apiKey=17bde5c1903e4a31a9d1560bf1256a95',
           },
-          // {
-          //   category: "News",
-          //   api_id: 2,
-          //   title: 'Title',
-          //   description: 'Description',
-          //   img: 'https://lh3.googleusercontent.com/proxy/lD4D1xGL6fSr1RL--KKxXknjxkY7vUIQZOa9M3rpCRFdKRE696CnPc2kODWsNFfbxO06HRcvqV_Zr8Jleo_fBMlylDvxGHiuf7voTZcsWeGmjLYL36tYlpG0r7_AruzPziQQ41SgaNo',
-          //   url: 'https://newsapi.org/v2/top-headlines?country=us&apiKey=17bde5c1903e4a31a9d1560bf1256a95',
-          // },
-
-          // Social
-          // {
-          //   category: "Social",
-          //   api_id: 3,
-          //   title: 'Powerball Ticket',
-          //   description: 'Powerball Ticket retrieves the latest Powerball winning numbers',
-          //   img: 'https://s3.amazonaws.com/cdn.powerball.com/drupal/files/powerball-power-play-68px.png',
-          //   url: 'https://games.api.lottery.com/api/v2.0/results?game=59bc2b6031947b9daf338d32',
-          // },
 
            // Entertainment 
            {
