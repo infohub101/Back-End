@@ -12,7 +12,7 @@ exports.seed = function(knex) {
             title: 'NASA - Astronomy Picture of the Day',
             description: 'Discover the cosmos! Each day a different image or photograph of our fascinating universe is featured, along with a brief explanation written by a professional astronomer.',
             img: 'https://upload.wikimedia.org/wikipedia/commons/e/e5/NASA_logo.svg',
-            url: 'https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY',
+            url: 'https://api.nasa.gov/planetary/apod?api_key=7K9WRASFdJrzyD0pWRNUNsbtgADoFHBIwDhaxeLJ',
           },
 
           // News
